@@ -1,28 +1,53 @@
-#!/bin/bash
+# 📱 Within – A Full-Stack Social Media App
 
-# Check if git is installed
-if ! command -v git &> /dev/null
-then
-    echo "Git is not installed. Please install git first."
-    exit
-fi
+**Within** is a modern, full-stack social media platform inspired by Instagram. Built with scalability and clean UI in mind, it allows users to sign up, post photos, view feeds, and interact with content in real time.
 
-# Initialize git repo
-git init
+---
 
-# Add all files
-git add .
+## 🚀 Features
 
-# Commit files
-git commit -m "Initial commit: full stack Instagram clone"
+- 🔐 User authentication (register/login/logout)
+- 🖼️ Image upload with captions
+- 📷 Feed display with most recent posts
+- ❤️ Like functionality (future: comments, sharing)
+- 🧠 Protected routes with auth middleware
+- ☁️ Firebase storage integration for image hosting
+- ⚙️ Built with a modular backend and clean UI
 
-# Rename branch to main
-git branch -M main
+---
 
-# Add remote origin
-git remote add origin https://github.com/swart47/within-instagram-clone.git
+## 🛠️ Tech Stack
 
-# Push to GitHub
-git push -u origin main
+**Frontend:**
+- React.js
+- Tailwind CSS
+- Axios
+- React Router
 
-echo "Done! Check your repo at https://github.com/swart47/within-instagram-clone"
+**Backend:**
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+- JWT for Auth
+- Firebase (Storage)
+
+---
+
+## 📂 Project Structure
+
+```bash
+within/
+│
+├── client/         # React frontend
+│   ├── src/
+│   └── ...
+│
+├── server/         # Node.js backend
+│   ├── controllers/
+│   ├── routes/
+│   ├── models/
+│   └── ...
+│
+├── .env.example    # Sample env file
+├── README.md
+└── package.json
